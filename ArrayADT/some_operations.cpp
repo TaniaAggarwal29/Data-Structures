@@ -34,6 +34,36 @@ void Left_Rotation(struct Array *arr)
 	}
 }
 
+//function to insert element in a sorted array
+void Insert_Sorted(struct Array *arr, int element)
+{
+	if (arr->length > 0 && arr->length<arr->size)
+	{
+		int i = arr->length-1;
+		while(arr->A[i] > element)
+		{
+			arr->A[i+1] = arr->A[i];
+			i--;
+		}
+		arr->A[i+1] = element;
+		arr->length++;
+	}
+}
+
+//Function to check if elements are sorted
+bool is_Sorted(struct Array arr)
+{
+	if(arr.length > 0)
+	{
+		for(int i=0; i<arr.length-1; i++)
+		{
+			if (arr.A[i] > arr.A[i+1])
+				return false;
+		}
+		return true;
+	}
+}
+
 //Display elements of array
 void display(struct Array arr)
 {
@@ -53,6 +83,15 @@ int main()
 	
 	Left_Rotation(&arr1);
 	display(arr1);
+	
+	struct Array arr2 = {{10, 12, 14, 18, 20}, 10, 5};
+	Insert_Sorted(&arr2, 16);
+	display(arr2);
+	
+	if (is_Sorted(arr2))
+		cout<<"\nTrue";
+	else
+		cout<<"\nFalse";
 	
 	return 0;
 }
