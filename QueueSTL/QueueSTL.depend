@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1621012957 source:e:\codeblocks\queuestl\main.cpp
+	<iostream>
+	<queue>
+
