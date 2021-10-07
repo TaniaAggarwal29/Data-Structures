@@ -36,3 +36,10 @@ int main() {
 
     return 0;
 }
+
+// Time complexity:
+// best case : O(n)
+// worst case : O(n^2)
+
+// Space complexity:
+// O(1)
