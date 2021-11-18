@@ -1,3 +1,0 @@
-I:/02_Codes_Projects/Data-Structures/Sorting/MergeSort/cmake-build-debug/CMakeFiles/MergeSort.dir
-I:/02_Codes_Projects/Data-Structures/Sorting/MergeSort/cmake-build-debug/CMakeFiles/edit_cache.dir
-I:/02_Codes_Projects/Data-Structures/Sorting/MergeSort/cmake-build-debug/CMakeFiles/rebuild_cache.dir
