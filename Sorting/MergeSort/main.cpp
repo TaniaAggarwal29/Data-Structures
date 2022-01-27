@@ -1,20 +1,30 @@
 #include <iostream>
 using namespace std;
 
+int count=0;
+
 void merge(int a[], int l, int mid, int h) {
     int i = l, j = mid+1, k = l;
     int b[h+1];
 
     while (i<=mid and j<=h) {
-        if(a[i] < a[j])
+        if(a[i] < a[j]) {
             b[k++] = a[i++];
-        else
+            count++;
+        }
+        else {
             b[k++] = a[j++];
+            count++;
+        }
     }
-    for(; i<=mid; i++)
+    for(; i<=mid; i++) {
         b[k++] = a[i];
-    for(; j<=h; j++)
+        count++;
+    }
+    for(; j<=h; j++){
         b[k++] = a[j];
+        count++;
+    }
 
     for(i=l; i<=h; i++)
         a[i] = b[i];
@@ -57,7 +67,7 @@ int main() {
     cout << "Sorted Array : ";
     for (int i=0; i<n; i++)
         cout << a[i] << " ";
-    cout << endl;
+    cout << endl << "count: " << count;
 
     return 0;
 }
