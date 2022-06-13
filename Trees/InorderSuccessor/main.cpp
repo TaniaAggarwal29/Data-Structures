@@ -16,7 +16,6 @@ Node* createBST(Node *root, int key){
     if(!root){
         return new Node(key);
     }
-
     if(key <= root->val)
         root->left = createBST(root->left, key);
     else
